@@ -1,10 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Next.js E-commerce Application
+This is a modern e-commerce platform built with Next.js 15 (App Router). The application is designed to showcase and manage products, featuring a clean, responsive UI and a robust backend powered by Next.js API Routes and MongoDB. This project was bootstrapped with create-next-app.
 
-## Getting Started
+🌟 Features
+Public Pages: A comprehensive set of public-facing pages, including a homepage, a product list, and dynamic product detail pages.
 
+Secure Authentication: User authentication is handled securely using NextAuth.js.
+
+Protected Routes: Certain routes, like the "Add Product" dashboard, are protected and accessible only to authenticated users.
+
+API Routes: Utilizes Next.js API Routes for efficient backend operations.
+
+Database: Integrates with MongoDB for flexible and scalable data storage.
+
+🚀 Getting Started
+To get a copy of this project up and running on your local machine, follow these steps.
+
+Prerequisites
+Make sure you have Node.js and npm installed on your system.
+
+Installation
+Clone the repository:
+
+git clone [your-repository-url]
+cd [your-project-folder]
+
+Install dependencies:
+
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+
+Environment Variables:
+
+Create a .env.local file in the root directory and add your MongoDB connection string.
+
+MONGODB_URI=your_mongodb_connection_string
+
+Running the Development Server
 First, run the development server:
 
-```bash
 npm run dev
 # or
 yarn dev
@@ -12,25 +50,56 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result. The page auto-updates as you edit the files.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🗺️ Route Summary
+Route
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Description
 
-## Learn More
+Access
 
-To learn more about Next.js, take a look at the following resources:
+/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The main landing page with a hero section.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Public
 
-## Deploy on Vercel
+/login
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+User authentication page.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Public
+
+/products
+
+Displays a list of all products fetched from the database.
+
+Public
+
+/products/[id]
+
+Shows detailed information for a single product.
+
+Public
+
+/dashboard/add-product
+
+Form to add new products to the database.
+
+Protected (Authentication Required)
+
+📚 Learn More
+To learn more about Next.js and its features, check out the official documentation:
+
+Next.js Documentation
+
+Learn Next.js - an interactive tutorial.
+
+You can also check out the Next.js GitHub repository for more details.
+
+🚀 Deploy on Vercel
+The easiest way to deploy your Next.js app is to use the Vercel Platform, from the creators of Next.js.
+
+For more details, refer to the Next.js deployment documentation.

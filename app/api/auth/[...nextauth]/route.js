@@ -1,3 +1,4 @@
+
 import NextAuth from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 
@@ -11,7 +12,8 @@ export const authOptions = {
     pages: {
         signIn: "/login",
     },
-    secret: process.env.NEXTAUTH_SECRET,
+    // এই লাইনটি যোগ করুন
+    secret: process.env.NEXTAUTH_URL,
 }
 
 const handler = NextAuth(authOptions)
